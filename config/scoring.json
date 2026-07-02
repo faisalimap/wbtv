@@ -1,0 +1,9 @@
+{
+    "sourceReliability": 30,
+    "freshness": 25,
+    "breaking": 15,
+    "category": 10,
+    "duplicateBoost": 10,
+    "headlineQuality": 5,
+    "articleLength": 5
+}
