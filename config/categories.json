@@ -1,0 +1,38 @@
+{
+    "world": {
+        "priority": 100
+    },
+    "india": {
+        "priority": 95
+    },
+    "politics": {
+        "priority": 90
+    },
+    "business": {
+        "priority": 88
+    },
+    "technology": {
+        "priority": 87
+    },
+    "science": {
+        "priority": 80
+    },
+    "sports": {
+        "priority": 78
+    },
+    "health": {
+        "priority": 76
+    },
+    "entertainment": {
+        "priority": 70
+    },
+    "education": {
+        "priority": 68
+    },
+    "crime": {
+        "priority": 75
+    },
+    "fact-check": {
+        "priority": 95
+    }
+}
