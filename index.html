@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBTV World - Under Construction</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts for typography matching the logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .serif-brand {
+            font-family: 'Lora', serif;
+        }
+        /* Subtle slow circular pulse to mimic broadcasting waves */
+        @keyframes broadcast {
+            0% { transform: scale(1); opacity: 0.2; }
+            50% { opacity: 0.4; }
+            100% { transform: scale(1.15); opacity: 0; }
+        }
+        .wave-pulse {
+            animation: broadcast 4s infinite linear;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-yellow-500 selection:text-slate-950">
+
+    <!-- TOP BAR -->
+    <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span class="text-xs tracking-[0.2em] font-semibold text-slate-400 uppercase">ISBC Media Group</span>
+            <span class="text-xs bg-yellow-500/10 text-yellow-500 font-bold px-3 py-1 rounded-full border border-yellow-500/20">STATUS: ASSEMBLING WIRE</span>
+        </div>
+    </header>
+
+    <!-- HERO MAIN CONTAINER -->
+    <main class="max-w-4xl w-full mx-auto px-6 py-12 flex flex-col items-center text-center my-auto">
+        
+        <!-- Animated Brand Logo Holder -->
+        <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
+            <!-- Pulsing outer signal waves -->
+            <div class="absolute inset-0 rounded-full border border-yellow-500/30 wave-pulse"></div>
+            <div class="absolute inset-2 rounded-full border border-slate-700/50 wave-pulse" style="animation-delay: 2s;"></div>
+            <!-- The Logo Image -->
+            <img class="relative w-36 h-36 object-contain rounded-full border-2 border-yellow-500 shadow-2xl bg-white p-1" 
+                 src="https://wbtv.qzz.io/favicon.png" 
+                 onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=200&auto=format&fit=crop&q=60'" 
+                 alt="WBTV Logo">
+        </div>
+
+        <!-- Headline Titles -->
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white uppercase mb-2">
+            WBTV <span class="text-yellow-500 font-light serif-brand">World</span>
+        </h1>
+        <p class="text-lg md:text-xl font-medium text-slate-300 serif-brand italic mb-8">
+            World Bulletin TeleVision
+        </p>
+
+        <!-- COUNTDOWN CONTAINER -->
+        <div class="grid grid-cols-4 gap-2 md:gap-4 max-w-md w-full mb-10">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+                <span id="days" class="block text-2xl md:text-3xl font-extrabold text-white">00</span>
+                <span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Days</span>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+                <span id="hours" class="block text-2xl md:text-3xl font-extrabold text-white">00</span>
+                <span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Hours</span>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+                <span id="minutes" class="block text-2xl md:text-3xl font-extrabold text-white">00</span>
+                <span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Mins</span>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+                <span id="seconds" class="block text-2xl md:text-3xl font-extrabold text-white">00</span>
+                <span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Secs</span>
+            </div>
+        </div>
+
+        <!-- INFO PREVIEW CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full text-left mb-12">
+            <div class="bg-slate-950 border border-slate-900 hover:border-slate-800 p-5 rounded-xl transition duration-300">
+                <span class="text-yellow-500 text-lg font-bold mb-2 block">🌍 Global Scope</span>
+                <p class="text-xs text-slate-400 leading-relaxed">Aggregating breaking news from over 18 international and local wire networks seamlessly.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-900 hover:border-slate-800 p-5 rounded-xl transition duration-300">
+                <span class="text-yellow-500 text-lg font-bold mb-2 block">🗣️ Multi-Lingual</span>
+                <p class="text-xs text-slate-400 leading-relaxed">Fully integrated reading experiences in English, Hindi, and Urdu with specialized native script layouts.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-900 hover:border-slate-800 p-5 rounded-xl transition duration-300">
+                <span class="text-yellow-500 text-lg font-bold mb-2 block">⚡ Instant Refreshes</span>
+                <p class="text-xs text-slate-400 leading-relaxed">Continuous background cron tasks automatically updating local JSON architectures every 6 hours.</p>
+            </div>
+        </div>
+
+        <!-- NOTIFY FORM (STATIC ENGINE DISGUISE) -->
+        <div class="w-full max-w-md bg-slate-900/40 p-1 border border-slate-800 rounded-full flex items-center justify-between">
+            <input type="email" placeholder="Enter your email for launch alerts" class="bg-transparent pl-5 pr-2 py-2 w-full focus:outline-none text-sm text-white placeholder-slate-500">
+            <button onclick="alert('Thank you for subscribing! We will ping you as soon as the main dashboard wire connects.')" class="bg-yellow-500 hover:bg-yellow-600 text-slate-950 font-bold text-xs px-6 py-3 rounded-full transition shrink-0 cursor-pointer">
+                Subscribe
+            </button>
+        </div>
+
+    </main>
+
+    <!-- PORTFOLIO ENGINEERING FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-4xl mx-auto px-6 space-y-2">
+            <p class="font-semibold text-slate-400">© 2026 Indian Subcontinent Broadcasting Corporation (ISBC)</p>
+            <p class="opacity-60 leading-relaxed">
+                <strong>Academic Portfolio Notice:</strong> This platform is a non-commercial concepts project showcasing structural pipeline automation, responsive static layouts, and real-time RSS feed parsers.
+            </p>
+        </div>
+    </footer>
+
+    <!-- LIGHTWEIGHT INTERACTIVE COUNTDOWN LOGIC -->
+    <script>
+        // Set dynamic destination time to always keep the countdown active for visiting users
+        // This ensures the site never looks "dead" by pointing to a past date
+        let countdownDate = localStorage.getItem('wbtv_countdown_target');
+        if (!countdownDate) {
+            const target = new Date();
+            target.setDate(target.getDate() + 18); // Set target to 18 days from user's first load
+            countdownDate = target.getTime();
+            localStorage.setItem('wbtv_countdown_target', countdownDate);
+        }
+
+        const interval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(interval);
+                // Reset to another 15 days if elapsed so it stays looking active
+                localStorage.removeItem('wbtv_countdown_target');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
