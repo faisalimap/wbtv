@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Lost - 404 WBTV</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .serif-brand {
+            font-family: 'Lora', serif;
+        }
+        /* Scanline Glitch Filter styling for old TV static feel */
+        .scanlines {
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%, 
+                rgba(0, 0, 0, 0.25) 50%
+            ), linear-gradient(
+                90deg, 
+                rgba(255, 0, 0, 0.06), 
+                rgba(0, 255, 0, 0.02), 
+                rgba(0, 0, 255, 0.06)
+            );
+            background-size: 100% 4px, 6px 100%;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between scanlines selection:bg-yellow-500 selection:text-slate-950">
+
+    <!-- TOP NAV -->
+    <header class="py-4 border-b border-slate-900 bg-slate-950/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img class="w-8 h-8 object-contain rounded-full border border-yellow-500 bg-white" src="https://wbtv.qzz.io/favicon.png" alt="Logo">
+                <span class="text-sm font-black tracking-tight text-white uppercase">WBTV <span class="text-yellow-500 font-normal serif-brand">World</span></span>
+            </div>
+            <span class="text-xs text-red-500 font-bold uppercase tracking-wider flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span> NO SIGNAL
+            </span>
+        </div>
+    </header>
+
+    <!-- ERROR BLOCK -->
+    <main class="max-w-lg w-full mx-auto px-6 py-12 flex flex-col items-center text-center my-auto">
+        
+        <!-- Retro Simulated TV Test Pattern -->
+        <div class="w-full max-w-xs h-16 bg-slate-900 border border-slate-800 rounded-lg flex overflow-hidden shadow-2xl mb-8 relative">
+            <div class="flex-1 h-full bg-neutral-300"></div>
+            <div class="flex-1 h-full bg-yellow-400"></div>
+            <div class="flex-1 h-full bg-teal-400"></div>
+            <div class="flex-1 h-full bg-emerald-500"></div>
+            <div class="flex-1 h-full bg-fuchsia-500"></div>
+            <div class="flex-1 h-full bg-red-600"></div>
+            <div class="flex-1 h-full bg-blue-700"></div>
+            <!-- Dynamic Glitch Text Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center bg-black/45">
+                <span class="text-[10px] tracking-[0.3em] font-black text-white uppercase animate-pulse">Static Code 404</span>
+            </div>
+        </div>
+
+        <!-- Text copy -->
+        <h2 class="text-7xl font-black text-white tracking-tighter mb-2">404</h2>
+        <h3 class="text-xl font-bold text-yellow-500 tracking-wide uppercase mb-3">Transmission Lost</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+            The reporting feed or directory path you targeted has gone off-air. The resource might have been archived under our strict <strong class="text-slate-300 font-semibold">3-6 month cleanup policy</strong> or relocated to another branch.
+        </p>
+
+        <!-- Dynamic Redirection Actions -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+            <a href="/" class="bg-yellow-500 hover:bg-yellow-600 text-slate-950 font-bold text-sm px-6 py-3 rounded-lg transition text-center shadow-lg cursor-pointer shadow-yellow-500/10">
+                Return to Broadcast Desk
+            </a>
+            <button onclick="window.history.back()" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 font-bold text-sm px-6 py-3 rounded-lg transition cursor-pointer">
+                Previous Frequency (Go Back)
+            </button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-6 border-t border-slate-900 bg-slate-950/40 text-center text-xs text-slate-600">
+        <p class="max-w-md mx-auto px-6">
+            If you believe this path should contain an active wire, contact the ISBC engineering desk at <span class="text-slate-400 font-mono">isbc.qzz.io</span>.
+        </p>
+    </footer>
+
+</body>
+</html>
